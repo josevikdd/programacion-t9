@@ -1,0 +1,46 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: Jose Vicente Sanchez
+  Date: 24/05/2026
+  Time: 9:55
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<jsp:useBean id="usuario" scope="request" class="src.Usuario" />
+<html>
+<head>
+    <title>Formulario Javabeans con JSP</title>
+</head>
+  <body bgcolor="#ffffcc">
+    <%-- Mostrar formulario en pantalla si no tenemos la información --%>
+    <% if (
+            ((request.getParameter("nombre")==null) &&
+                    (request.getParameter("email")==null)) ||
+            ((request.getParameter("nombre").equals("")) &&
+                    (request.getParameter("email").equals("")))
+    ) { %>
+        Complete este formulario:
+        <br>
+        <form method="POST" action="formularioJavabean.jsp">
+            Su nombre: <input type="text" name="nombre" size="30">
+            <br>
+            Su email: <input type="text" name="email" size="30">
+            <br>
+            <input type="submit" value="Enviar">
+        </form>
+
+    <%-- Procesar el envio y mostrar información enviada en pantalla --%>
+
+    <%  } else { %>
+        <% String nombre, email;
+        nombre = request.getParameter("nombre");
+        email = request.getParameter("email");
+        %>
+        <jsp:setProperty name="usuario" property="nombre" value="<%= nombre %>" />
+        <jsp:setProperty name="usuario" property="email" value="<%= email %>" />
+        <jsp:forward page="/process2.jsp" ></jsp:forward>
+
+
+        <% } %>
+  </body>
+</html>
