@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6045ada9-e3e8-4bcb-a7b8-2fba695ca359" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/formulario2.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/formulario1.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/formulario1.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +101,7 @@
       <workItem from="1779721656775" duration="59000" />
       <workItem from="1779721739011" duration="780000" />
       <workItem from="1779722538161" duration="481000" />
-      <workItem from="1779724278778" duration="673000" />
+      <workItem from="1779724278778" duration="2564000" />
     </task>
     <servers />
   </component>

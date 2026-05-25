@@ -29,6 +29,11 @@
             margin-top:10px;
         }
 
+        .inputGrande input {
+            height: 2em;
+            width: 100%;
+        }
+
         .margen {
             margin-left: 175px;
         }
@@ -42,6 +47,10 @@
 
         textarea{
             resize:none;
+        }
+
+        .select {
+            align-content: center;
         }
 
         .boton{
@@ -73,66 +82,47 @@
 
 <form action="formulario1.jsp" method="post">
 
-    <table border="0" cellpadding="5">
-
+    <table class="inputGrande" border="0">
         <tr>
             <td class="titulos">Nombre Película</td>
-            <td>
-                <input type="text" name="nombre" size="25">
-            </td>
+            <td><input type="text" name="nombre" size="25"></td>
         </tr>
-
         <tr>
             <td class="titulos">Número Días Alquiler</td>
-            <td>
-                <input type="text" name="diasAlquiler" size="5">
-            </td>
+            <td><input type="text" name="diasAlquiler" size="5"></td>
         </tr>
-
     </table>
-
     <br>
 
     <table class="margen" border="0">
-
         <tr>
             <td class="titulos">Edad Cliente</td>
             <td class="titulos">Forma de Pago</td>
         </tr>
-
         <tr>
             <td>
-                <input type="radio" name="edadCliente" value="menor7">
+                <input type="radio" name="edadCliente" value="-7">
                 Menor de 7 años
                 <br>
-
-                <input type="radio" name="edadCliente" value="menor14">
+                <input type="radio" name="edadCliente" value="-14">
                 Menor de 14 años
                 <br>
-
-                <input type="radio" name="edadCliente" value="menor18">
+                <input type="radio" name="edadCliente" value="-18">
                 Menor de 18 años
                 <br>
-
-                <input type="radio" name="edadCliente" value="mayor18">
+                <input type="radio" name="edadCliente" value="+18">
                 Mayor de 18 años
             </td>
-
-            <td valign="top">
+            <td class ="select" valign="top">
                 <select name="formaPago">
-                    <option value="visa">VISA</option>
-                    <option value="mastercard">MasterCard</option>
-                    <option value="paypal">PayPal</option>
-                    <option value="efectivo">Efectivo</option>
+                    <option value="contado">Contado</option>
+                    <option value="tarjeta">Tarjeta</option>
                 </select>
             </td>
         </tr>
-
     </table>
-
     <br>
-
-    <section class="margen" border="0" cellpadding="5">
+    <section class="margen">
         <b class="titulos">Especificaciones extras</b> <br> <br>
         <textarea name="especificacionesExtra" rows="8" cols="200"></textarea>
     </section>
