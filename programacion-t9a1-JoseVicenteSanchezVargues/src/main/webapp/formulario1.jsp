@@ -54,11 +54,24 @@
 
 <body>
 
+<% if (
+        ((request.getParameter("nombre")==null) &&
+                (request.getParameter("diasAlquiler")==null) &&
+                (request.getParameter("edadCliente")==null) &&
+                (request.getParameter("formaPago")==null) &&
+                (request.getParameter("especificacionesExtra")==null))
+        || ((request.getParameter("nombre").equals("")) &&
+                (request.getParameter("diasAlquiler").equals("")) &&
+                (request.getParameter("edadCliente").equals("")) &&
+                (request.getParameter("formaPago").equals("")) &&
+                (request.getParameter("especificacionesExtra").equals("")))
+) { %>
+
 <div class="titulo">
     VIDEOCLUB ON-LINE
 </div>
 
-<form action="procesarAlquiler.jsp" method="post">
+<form action="formulario1.jsp" method="post">
 
     <table border="0" cellpadding="5">
 
@@ -89,19 +102,19 @@
 
         <tr>
             <td>
-                <input type="radio" name="edad" value="menor7">
+                <input type="radio" name="edadCliente" value="menor7">
                 Menor de 7 años
                 <br>
 
-                <input type="radio" name="edad" value="menor14">
+                <input type="radio" name="edadCliente" value="menor14">
                 Menor de 14 años
                 <br>
 
-                <input type="radio" name="edad" value="menor18">
+                <input type="radio" name="edadCliente" value="menor18">
                 Menor de 18 años
                 <br>
 
-                <input type="radio" name="edad" value="mayor18">
+                <input type="radio" name="edadCliente" value="mayor18">
                 Mayor de 18 años
             </td>
 
@@ -131,6 +144,24 @@
     </div>
 
 </form>
+
+<%  } else { %>
+<% String nombre, diasAlquiler, edadCliente, formaPago, especificacionesExtra ;
+    nombre = request.getParameter("nombre");
+    diasAlquiler = request.getParameter("diasAlquiler");
+    edadCliente = request.getParameter("edadCliente");
+    formaPago = request.getParameter("formaPago");
+    especificacionesExtra = request.getParameter("especificacionesExtra");
+%>
+<jsp:setProperty name="alquiler" property="nombre" value="<%= nombre %>" />
+<jsp:setProperty name="alquiler" property="diasAlquiler" value="<%= diasAlquiler %>" />
+<jsp:setProperty name="alquiler" property="edadCliente" value="<%= edadCliente %>" />
+<jsp:setProperty name="alquiler" property="formaPago" value="<%= formaPago %>" />
+<jsp:setProperty name="alquiler" property="especificacionesExtra" value="<%= especificacionesExtra %>" />
+<jsp:forward page="/formulario2.jsp" ></jsp:forward>
+
+
+<% } %>
 
 </body>
 </html>

@@ -3,7 +3,7 @@ package entities;
 public class Alquiler {
 
     private String nombre;
-    private int diasAlquiler;
+    private String diasAlquiler;
     private String edadCliente;
     private String formaPago;
     private String especificacionesExtra;
@@ -16,11 +16,11 @@ public class Alquiler {
         this.nombre = nombre;
     }
 
-    public int getDiasAlquiler() {
+    public String getDiasAlquiler() {
         return diasAlquiler;
     }
 
-    public void setDiasAlquiler(int diasAlquiler) {
+    public void setDiasAlquiler(String diasAlquiler) {
         this.diasAlquiler = diasAlquiler;
     }
 
@@ -48,7 +48,7 @@ public class Alquiler {
         this.especificacionesExtra = especificacionesExtra;
     }
 
-    public Alquiler(String nombre, int diasAlquiler, String edadCliente, String formaPago, String especificacionesExtra) {
+    public Alquiler(String nombre, String diasAlquiler, String edadCliente, String formaPago, String especificacionesExtra) {
         this.nombre = nombre;
         this.diasAlquiler = diasAlquiler;
         this.edadCliente = edadCliente;
