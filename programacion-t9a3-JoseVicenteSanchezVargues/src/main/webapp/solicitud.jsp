@@ -52,6 +52,7 @@
 
   <% } %>
 
+  <jsp:forward page="/respuesta.jsp"></jsp:forward>
   <% } %>
   </body>
 </html>
