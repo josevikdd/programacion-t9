@@ -20,6 +20,8 @@
   <% String entrega = request.getParameter("entrega"); %>
   <% String caracteristicas = request.getParameter("caracteristicas"); %>
 
+  <% if (electrodomesticos != null && electrodomesticos.length != 0){ %>
+
   <section class="datos">
     <h2>Datos de cliente:</h2>
     <b>Cliente</b>
@@ -48,6 +50,9 @@
     <br>
     <b>Características especiales:</b>
     <%= caracteristicas %>
-  </section>
+    </section>
+    <% } else { %>
+    <b>Su pedido está vacío. Vuelva a la página anterior y seleccione los productos.</b>
+    <% } %>
   </body>
 </html>
