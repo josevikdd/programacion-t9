@@ -53,7 +53,7 @@
     <b>Estado de la solicitud: </b> <jsp:getProperty name="solicitud" property="estado" />
     <br>
     <%
-    if (!estado.equals("")){
+    if (estado.equals("Rechazada.")){
     %>
     <b>Motivo: </b> <jsp:getProperty name="solicitud" property="motivo" />
     <% } %>
