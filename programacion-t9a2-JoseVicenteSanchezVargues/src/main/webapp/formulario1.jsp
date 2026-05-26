@@ -11,8 +11,16 @@
     <title>Realizar pedido</title>
 </head>
   <body>
+
+  <% if (request.getParameter("electrodomesticos")==null ||
+        request.getParameter("pago")==null ||
+        request.getParameter("entrega")==null ||
+        request.getParameter("nombre")==null ||
+        request.getParameter("apellidos")==null ||
+        request.getParameter("dni")==null ||
+        request.getParameter("telefono")==null) { %>
     <h1>Realice su pedido</h1>
-    <form>
+    <form action="/formulario2.jsp" method="post">
         <section class="electrodomesticos">
             <h2>Seleccione los electrodomésticos:</h2>
             <div class="electrodomestico">
@@ -74,5 +82,18 @@
         </section>
         <input type="submit" value="Confirmar pedido">
     </form>
+  <% } else {
+      String electrodomesticos, pago, entrega, caracteristicas, nombre, apellidos, dni, telefono;
+      electrodomesticos = request.getParameter("electrodomesticos");
+      pago = request.getParameter("pago");
+      caracteristicas = request.getParameter("caracteristicas");
+      nombre = request.getParameter("nombre");
+      apellidos = request.getParameter("apellidos");
+      dni = request.getParameter("dni");
+      telefono = request.getParameter("telefono");
+  %>
+  <jsp:forward page="/formulario2.jsp"></jsp:forward>
+  <% } %>
+
   </body>
 </html>
