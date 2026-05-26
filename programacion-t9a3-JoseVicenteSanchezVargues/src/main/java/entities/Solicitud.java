@@ -46,5 +46,11 @@ public class Solicitud {
         this.motivo = motivo;
     }
 
+    public Solicitud(int cantidad, String prueba, String estado) {
+        this.cantidad = cantidad;
+        this.prueba = prueba;
+        this.estado = estado;
+    }
+
     public Solicitud() {}
 }
