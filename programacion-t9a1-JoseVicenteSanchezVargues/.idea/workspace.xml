@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6045ada9-e3e8-4bcb-a7b8-2fba695ca359" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../programacion-t9a2-JoseVicenteSanchezVargues/src/main/webapp/cadena.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../programacion-t9a2-JoseVicenteSanchezVargues/src/main/webapp/formulario1.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../programacion-t9a2-JoseVicenteSanchezVargues/src/main/webapp/formulario1.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -106,6 +107,7 @@
       <workItem from="1779740026572" duration="61000" />
       <workItem from="1779740106909" duration="2000" />
       <workItem from="1779740212483" duration="2630000" />
+      <workItem from="1779809395532" duration="1110000" />
     </task>
     <servers />
   </component>

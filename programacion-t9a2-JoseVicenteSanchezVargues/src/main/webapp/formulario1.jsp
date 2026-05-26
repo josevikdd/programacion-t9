@@ -9,27 +9,66 @@
 <html>
 <head>
     <title>Realizar pedido</title>
+
+    <style>
+        body {
+            background-color: beige;
+        }
+
+        body section {
+            background-color: bisque;
+            border-radius: 20px;
+            padding: 10px 10px 10px 10px;
+            margin-bottom: 10px;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        .contenedor {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .electrodomestico {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .electrodomestico img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+    </style>
 </head>
   <body>
     <h1>Realice su pedido</h1>
     <form action="/programacion-t9a2-JoseVicenteSanchezVargues/formulario2.jsp" method="post">
         <section class="electrodomesticos">
             <h2>Seleccione los electrodomésticos:</h2>
+            <div class="contenedor">
             <div class="electrodomestico">
-                <img src="television"><br>
+                <img src="television.jpg"><br>
                 <input type="checkbox" name="electrodomesticos" value="television">
             </div>
             <div class="electrodomestico">
-                <img src="cadena"><br>
+                <img src="cadena.jpg"><br>
                 <input type="checkbox" name="electrodomesticos" value="cadena">
             </div>
             <div class="electrodomestico">
-                <img src="frigorifico"><br>
+                <img src="frigorifico.jpg"><br>
                 <input type="checkbox" name="electrodomesticos" value="frigorifico">
             </div>
             <div class="electrodomestico">
-                <img src="vitroceramica"><br>
+                <img src="vitroceramica.jpg"><br>
                 <input type="checkbox" name="electrodomesticos" value="vitroceramica">
+            </div>
             </div>
         </section>
         <section class="pago">
@@ -49,7 +88,7 @@
         </section>
         <section class="caracteristicas">
             <h2>Indique las características especiales</h2>
-            <input type="textarea" name="caracteristicas">
+            <textarea rows="6" cols="100" name="caracteristicas"></textarea>
         </section>
         <section class="datos">
             <h2>Datos personales</h2>
