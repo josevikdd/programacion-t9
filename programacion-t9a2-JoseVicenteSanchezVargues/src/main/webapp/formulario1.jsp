@@ -34,7 +34,7 @@
         </section>
         <section class="pago">
             <h2>Seleccione el método de pago</h2>
-                <select name="pago">
+                <select name="pago" required>
                     <option value="Visa">Visa</option>
                     <option value="Contado">Contado</option>
                     <option value="Cheque">Cheque</option>
@@ -42,9 +42,9 @@
         </section>
         <section class="entrega">
             <h2>Seleccione la entrega</h2>
-            <input type="radio" name="entrega" value="Recogida en tienda">
+            <input type="radio" name="entrega" value="Recogida en tienda" required>
             Recogida en tienda <br>
-            <input type="radio" name="entrega" value="Entrega a domicilio">
+            <input type="radio" name="entrega" value="Entrega a domicilio" required>
             Entrega a domicilio <br>
         </section>
         <section class="caracteristicas">
@@ -56,19 +56,19 @@
             <table border="0">
                 <tr>
                     <th> Nombre: </th>
-                    <td> <input type="text" name="nombre"> </td>
+                    <td> <input type="text" name="nombre" required> </td>
                 </tr>
                 <tr>
                     <th>Apellidos: </th>
-                    <td><input type="text" name="apellidos"> </td>
+                    <td><input type="text" name="apellidos" required> </td>
                 </tr>
                 <tr>
                     <th>DNI: </th>
-                    <td><input type="text" name="dni"> </td>
+                    <td><input type="text" name="dni" required> </td>
                 </tr>
                 <tr>
                     <th>Teléfono: </th>
-                    <td><input type="text" name="telefono"> </td>
+                    <td><input type="text" name="telefono" required> </td>
                 </tr>
             </table>
         </section>

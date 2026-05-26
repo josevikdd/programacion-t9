@@ -49,7 +49,11 @@
     <%= entrega %>
     <br>
     <b>Características especiales:</b>
+    <% if (caracteristicas.equals("")) { %>
+    No se han especificado características especiales.
+    <% } else { %>
     <%= caracteristicas %>
+    <% } %>
     </section>
     <% } else { %>
     <b>Su pedido está vacío. Vuelva a la página anterior y seleccione los productos.</b>
