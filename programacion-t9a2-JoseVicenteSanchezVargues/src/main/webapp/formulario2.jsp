@@ -11,33 +11,40 @@
     <title>Su pedido</title>
 </head>
   <body>
+  <% String nombre = request.getParameter("nombre");%>
+  <% String apellidos = request.getParameter("apellidos");%>
+  <% String dni = request.getParameter("dni"); %>
+  <% String telefono = request.getParameter("telefono"); %>
+  <% String electrodomesticos = request.getParameter("electrodomesticos"); %>
+  <% String pago = request.getParameter("pago"); %>
+  <% String entrega = request.getParameter("entrega"); %>
+  <% String caracteristicas = request.getParameter("caracteristicas"); %>
+
   <section class="datos">
     <h2>Datos de cliente:</h2>
     Cliente
-        <% request.getAtribute("nombre") %>
-        <% request.getAtribute("apellidos") %>
-        <br>
-        Con DNI:
-        <% request.getAtribute("dni") %>
-        <br>
-        Y teléfono:
-        <% request.getAtribute("telefono") %>
-        <br>
-    </section>
-    <section>
-        <h2>Datos del pedido:</h2>
-        Artículos:
-        <% request.getAtribute("electrodomesticos") %>
-        <br>
-        Método de pago:
-        <% request.getAtribute("pago") %>
-        <br>
-        Tipo de entrega:
-        <% request.getAtribute("entrega") %>
-        <br>
-        Características especiales:
-        <% request.getAtribute("caracteristicas") %>
-    </section>
-
+    <%= nombre + " " + apellidos %>
+    <br>
+    Con DNI:
+    <%= dni %>
+    <br>
+    Y teléfono:
+    <%= telefono %>
+    <br>
+  </section>
+  <section>
+    <h2>Datos del pedido:</h2>
+    Artículos:
+    <%= electrodomesticos %>
+    <br>
+    Método de pago:
+    <%= pago %>
+    <br>
+    Tipo de entrega:
+    <%= entrega %>
+    <br>
+    Características especiales:
+    <%= caracteristicas %>
+  </section>
   </body>
 </html>

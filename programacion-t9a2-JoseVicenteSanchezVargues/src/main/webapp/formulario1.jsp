@@ -12,7 +12,7 @@
 </head>
   <body>
     <h1>Realice su pedido</h1>
-    <form action="/formulario2.jsp" method="post">
+    <form action="/programacion-t9a2-JoseVicenteSanchezVargues/formulario2.jsp" method="post">
         <section class="electrodomesticos">
             <h2>Seleccione los electrodomésticos:</h2>
             <div class="electrodomestico">
