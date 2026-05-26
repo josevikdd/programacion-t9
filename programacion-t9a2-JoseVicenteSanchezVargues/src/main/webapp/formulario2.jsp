@@ -15,35 +15,38 @@
   <% String apellidos = request.getParameter("apellidos");%>
   <% String dni = request.getParameter("dni"); %>
   <% String telefono = request.getParameter("telefono"); %>
-  <% String electrodomesticos = request.getParameter("electrodomesticos"); %>
+  <% String[] electrodomesticos = request.getParameterValues("electrodomesticos"); %>
   <% String pago = request.getParameter("pago"); %>
   <% String entrega = request.getParameter("entrega"); %>
   <% String caracteristicas = request.getParameter("caracteristicas"); %>
 
   <section class="datos">
     <h2>Datos de cliente:</h2>
-    Cliente
+    <b>Cliente</b>
     <%= nombre + " " + apellidos %>
     <br>
-    Con DNI:
+    <b>Con DNI: </b>
     <%= dni %>
     <br>
-    Y teléfono:
+    <b>Y teléfono: </b>
     <%= telefono %>
     <br>
   </section>
   <section>
     <h2>Datos del pedido:</h2>
-    Artículos:
-    <%= electrodomesticos %>
+    <b>Artículos:</b>
+    <% for (String electrodomestico : electrodomesticos) { %>
     <br>
-    Método de pago:
+    <%= electrodomestico %>
+    <% } %>
+    <br>
+    <b>Método de pago:</b>
     <%= pago %>
     <br>
-    Tipo de entrega:
+    <b>Tipo de entrega:</b>
     <%= entrega %>
     <br>
-    Características especiales:
+    <b>Características especiales:</b>
     <%= caracteristicas %>
   </section>
   </body>
