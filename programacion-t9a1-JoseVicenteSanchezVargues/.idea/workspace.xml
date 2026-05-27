@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6045ada9-e3e8-4bcb-a7b8-2fba695ca359" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../programacion-t9a3-JoseVicenteSanchezVargues/src/main/webapp/respuesta.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../programacion-t9a3-JoseVicenteSanchezVargues/src/main/webapp/respuesta.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../programacion-t9a4-JoseVicenteSanchezVargues/src/main/java/controller/LoginServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../programacion-t9a4-JoseVicenteSanchezVargues/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../programacion-t9a4-JoseVicenteSanchezVargues/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +110,8 @@
       <workItem from="1779740212483" duration="2630000" />
       <workItem from="1779809395532" duration="1110000" />
       <workItem from="1779811129002" duration="4649000" />
-      <workItem from="1779817993761" duration="679000" />
+      <workItem from="1779817993761" duration="1690000" />
+      <workItem from="1779867241266" duration="306000" />
     </task>
     <servers />
   </component>
