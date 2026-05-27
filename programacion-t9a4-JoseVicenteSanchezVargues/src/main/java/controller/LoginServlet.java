@@ -35,7 +35,10 @@ public class LoginServlet extends HttpServlet {
         String nombre = req.getParameter("usuario");
         String contrasena = req.getParameter("contrasena");
 
-        //Comprobar si hace falta volver a la página del login?
+        if (nombre.equals("") || contrasena.equals("")) {
+            RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/formulario.jsp");
+            rd.forward(req, resp);
+        }
 
         Usuario login = new Usuario();
         login.setNombre(nombre);
