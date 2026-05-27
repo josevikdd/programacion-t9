@@ -32,7 +32,7 @@ public class LoginServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest req, HttpServletResponse resp )
             throws ServletException, IOException {
 
-        String nombre = req.getParameter("usuario");
+        String nombre = req.getParameter("nombre");
         String contrasena = req.getParameter("contrasena");
 
         if (nombre.equals("") || contrasena.equals("")) {
@@ -44,8 +44,10 @@ public class LoginServlet extends HttpServlet {
         login.setNombre(nombre);
         login.setContrasena(contrasena);
 
+        ServletContext scopeApplication = this.getServletContext();
+
         if (usuario.getNombre().equals(login.getNombre()) && usuario.getContrasena().equals(login.getContrasena())) {
-            req.setAttribute("login", login);
+            scopeApplication.setAttribute("usuario", login);
             RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/sesionIniciada.jsp");
             rd.forward(req, resp);
         } else {
