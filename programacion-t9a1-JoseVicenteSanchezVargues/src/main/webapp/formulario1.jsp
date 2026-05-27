@@ -39,10 +39,24 @@
         }
 
         .titulos{
-            background-color:#999900;
+            background-color: #999900;
+            color: black;
+            font-weight: bold;
+            padding: 4px;
+        }
+
+        .titulolargo{
+            background-color: #999900;
             color:black;
             font-weight:bold;
-            padding:4px;
+            padding: 4px 242px 4px 4px;
+        }
+
+        .tituloslargos{
+            background-color: #999900;
+            color:black;
+            font-weight:bold;
+            padding: 4px 100px 4px 4px;
         }
 
         textarea{
@@ -54,9 +68,12 @@
         }
 
         .boton{
+            margin-top: 10px;
             text-align:center;
-            column-gap: 10px;
+        }
 
+        .boton input {
+            margin-left: 30px;
         }
     </style>
 </head>
@@ -94,10 +111,11 @@
     </table>
     <br>
 
-    <table class="margen" border="0">
+    <section class="margen">
+    <table border="0">
         <tr>
-            <td class="titulos">Edad Cliente</td>
-            <td class="titulos">Forma de Pago</td>
+            <td class="tituloslargos">Edad Cliente</td>
+            <td class="tituloslargos">Forma de Pago</td>
         </tr>
         <tr>
             <td>
@@ -122,9 +140,10 @@
         </tr>
     </table>
     <br>
-    <section class="margen">
-        <b class="titulos">Especificaciones extras</b> <br> <br>
+    <section>
+        <b class="titulolargo">Especificaciones extras</b> <br> <br>
         <textarea name="especificacionesExtra" rows="8" cols="200"></textarea>
+    </section>
     </section>
 
     <div class="boton">
