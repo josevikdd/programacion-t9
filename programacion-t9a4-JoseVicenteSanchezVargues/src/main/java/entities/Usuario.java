@@ -3,7 +3,7 @@ package entities;
 public class Usuario {
 
     private String nombre;
-    private String contraseña;
+    private String contrasena;
 
     public String getNombre() {
         return nombre;
@@ -13,17 +13,17 @@ public class Usuario {
         this.nombre = nombre;
     }
 
-    public String getContraseña() {
-        return contraseña;
+    public String getContrasena() {
+        return contrasena;
     }
 
-    public void setContraseña(String contraseña) {
-        this.contraseña = contraseña;
+    public void setContrasena(String contrasena) {
+        this.contrasena = contrasena;
     }
 
-    public Usuario(String nombre, String contraseña) {
+    public Usuario(String nombre, String contrasena) {
         this.nombre = nombre;
-        this.contraseña = contraseña;
+        this.contrasena = contrasena;
     }
 
     public Usuario() {}

@@ -12,9 +12,9 @@
 </head>
   <body>
     <h2>Formulario de login de usuarios</h2>
-    <form>
+    <form action="LoginServlet" method="post">
     Nombre de usuario*: <input type="text" name="usuario"> <br>
-    Clave de acceso*: <input type="password" name="contraseña"> <br>
+    Clave de acceso*: <input type="password" name="contrasena"> <br>
     Recordar datos de acceso: <input type="checkbox" name="recordar"> <br>
     Los campos marcados con un asterisco deben rellenarse de forma obligatoria <br>
     <input type="submit" value="Enviar consulta">

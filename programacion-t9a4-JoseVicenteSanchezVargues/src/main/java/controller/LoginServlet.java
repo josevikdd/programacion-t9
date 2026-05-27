@@ -18,37 +18,32 @@ public class LoginServlet extends HttpServlet {
     @Override
     public void init() throws ServletException {
         usuario.setNombre("jose");
-        usuario.setContraseña("12345678Z");
+        usuario.setContrasena("12345678Z");
         getServletContext().setAttribute("usuario", usuario);
         super.init();
     }
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp)
-            throws ServletException, IOException {
-        processRequestGet(req, resp);
-    }
-
-    protected void processRequestGet(HttpServletRequest req, HttpServletResponse resp)
-            throws ServletException, IOException {
-
-        Usuario login = new Usuario();
-        login.setNombre(req.getParameter("usuario"));
-        login.setContraseña(req.getParameter("contraseña"));
-        getServletContext().setAttribute("login", login);
-    }
-
-    @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
-        processRequestPost(req, resp);
+        processRequest(req, resp);
     }
 
-    protected void processRequestPost(HttpServletRequest req, HttpServletResponse resp )
+    protected void processRequest(HttpServletRequest req, HttpServletResponse resp )
             throws ServletException, IOException {
-        if (getServletContext().getAttribute("login") == getServletContext().getAttribute("usuario")) {
+
+        String nombre = req.getParameter("usuario");
+        String contrasena = req.getParameter("contrasena");
+
+        //Comprobar si hace falta volver a la página del login?
+
+        Usuario login = new Usuario();
+        login.setNombre(nombre);
+        login.setContrasena(contrasena);
+
+        if (usuario.getNombre().equals(login.getNombre()) && usuario.getContrasena().equals(login.getContrasena())) {
             RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/sesionIniciada.jsp");
             rd.forward(req, resp);
-        }
+        } //else para usuario erróneo?
     }
 }
