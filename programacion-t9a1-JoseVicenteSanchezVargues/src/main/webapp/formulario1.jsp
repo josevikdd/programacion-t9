@@ -82,15 +82,16 @@
 
 <% if (
         ((request.getParameter("nombre")==null) &&
-                (request.getParameter("diasAlquiler")==null) &&
-                (request.getParameter("edadCliente")==null) &&
-                (request.getParameter("formaPago")==null) &&
-                (request.getParameter("especificacionesExtra")==null))
-        || ((request.getParameter("nombre").equals("")) &&
-                (request.getParameter("diasAlquiler").equals("")) &&
-                (request.getParameter("edadCliente").equals("")) &&
-                (request.getParameter("formaPago").equals("")) &&
-                (request.getParameter("especificacionesExtra").equals("")))
+        (request.getParameter("diasAlquiler")==null) &&
+        (request.getParameter("edadCliente")==null) &&
+        (request.getParameter("formaPago")==null) &&
+        (request.getParameter("especificacionesExtra")==null))
+        ||
+        ((request.getParameter("nombre").equals("")) &&
+        (request.getParameter("diasAlquiler").equals("")) &&
+        (request.getParameter("edadCliente").equals("")) &&
+        (request.getParameter("formaPago").equals("")) &&
+        (request.getParameter("especificacionesExtra").equals("")))
 ) { %>
 
 <div class="titulo">
