@@ -19,7 +19,7 @@ public class LoginServlet extends HttpServlet {
     public void init() throws ServletException {
         usuario.setNombre("jose");
         usuario.setContrasena("12345678Z");
-        getServletContext().setAttribute("usuario", usuario);
+        getServletContext().setAttribute("usuarioCorrecto", usuario);
         super.init();
     }
 
@@ -47,7 +47,13 @@ public class LoginServlet extends HttpServlet {
         ServletContext scopeApplication = this.getServletContext();
 
         if (usuario.getNombre().equals(login.getNombre()) && usuario.getContrasena().equals(login.getContrasena())) {
-            scopeApplication.setAttribute("usuario", login);
+            if (req.getParameterValues("recordar")!=null) {
+                String[] recordar = req.getParameterValues("recordar");
+                if (recordar.length==1) {
+                    scopeApplication.setAttribute("usuario", login);
+                }
+            }
+
             RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/sesionIniciada.jsp");
             rd.forward(req, resp);
         } else {

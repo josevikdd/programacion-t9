@@ -21,7 +21,7 @@
     <form action="LoginServlet" method="post">
     Nombre de usuario*: <input type="text" name="nombre"> <br>
     Clave de acceso*: <input type="password" name="contrasena"> <br>
-    Recordar datos de acceso: <input type="checkbox" name="recordar"> <br>
+    Recordar datos de acceso: <input type="checkbox" name="recordar" value="true"> <br>
     Los campos marcados con un asterisco deben rellenarse de forma obligatoria <br>
     <input type="submit" value="Enviar consulta">
     <input type="reset" value="Restablecer">
