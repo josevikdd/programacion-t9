@@ -42,8 +42,12 @@ public class LoginServlet extends HttpServlet {
         login.setContrasena(contrasena);
 
         if (usuario.getNombre().equals(login.getNombre()) && usuario.getContrasena().equals(login.getContrasena())) {
+            req.setAttribute("login", login);
             RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/sesionIniciada.jsp");
             rd.forward(req, resp);
-        } //else para usuario erróneo?
+        } else {
+            RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/formulario.jsp");
+            rd.forward(req, resp);
+        }
     }
 }
