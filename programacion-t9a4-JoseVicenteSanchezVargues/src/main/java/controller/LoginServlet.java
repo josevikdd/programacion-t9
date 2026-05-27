@@ -52,6 +52,8 @@ public class LoginServlet extends HttpServlet {
                 if (recordar.length==1) {
                     scopeApplication.setAttribute("usuario", login);
                 }
+            } else {
+                req.setAttribute("usuarioNoGuardado", login);
             }
 
             RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/sesionIniciada.jsp");

@@ -14,10 +14,16 @@
   <body>
   <%
   ServletContext scopeApplication = this.getServletContext();
+  Usuario usuario = new Usuario();
+  String nombre = "";
 
-  Usuario usuario = (Usuario) scopeApplication.getAttribute("usuario");
+  if (scopeApplication.getAttribute("usuario")!=null){
+    usuario = (Usuario) scopeApplication.getAttribute("usuario");
+  } else {
+    usuario = (Usuario) request.getAttribute("usuarioNoGuardado");
+  }
 
-  String nombre = usuario.getNombre();
+  nombre = usuario.getNombre();
   %>
       Sesion iniciada correctamente. Bienvenido <%= nombre %> .
   </body>
