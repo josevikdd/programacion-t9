@@ -103,11 +103,11 @@
     <table class="inputGrande" border="0">
         <tr>
             <td class="titulos">Nombre Película</td>
-            <td><input type="text" name="nombre" size="25"></td>
+            <td><input type="text" name="nombre" size="25" required></td>
         </tr>
         <tr>
             <td class="titulos">Número Días Alquiler</td>
-            <td><input type="text" name="diasAlquiler" size="5"></td>
+            <td><input type="number" name="diasAlquiler" size="5" required></td>
         </tr>
     </table>
     <br>
@@ -120,20 +120,20 @@
         </tr>
         <tr>
             <td>
-                <input type="radio" name="edadCliente" value="-7">
+                <input type="radio" name="edadCliente" value="-7" required>
                 Menor de 7 años
                 <br>
-                <input type="radio" name="edadCliente" value="-14">
+                <input type="radio" name="edadCliente" value="-14" required>
                 Menor de 14 años
                 <br>
-                <input type="radio" name="edadCliente" value="-18">
+                <input type="radio" name="edadCliente" value="-18" required>
                 Menor de 18 años
                 <br>
-                <input type="radio" name="edadCliente" value="+18">
+                <input type="radio" name="edadCliente" value="+18" required>
                 Mayor de 18 años
             </td>
             <td class ="select" valign="top">
-                <select name="formaPago">
+                <select name="formaPago" required>
                     <option value="contado">Contado</option>
                     <option value="tarjeta">Tarjeta</option>
                 </select>
@@ -156,9 +156,10 @@
 </form>
 
 <%  } else { %>
-<% String nombre, diasAlquiler, edadCliente, formaPago, especificacionesExtra ;
+<% String nombre, edadCliente, formaPago, especificacionesExtra ;
+    int diasAlquiler;
     nombre = request.getParameter("nombre");
-    diasAlquiler = request.getParameter("diasAlquiler");
+    diasAlquiler = Integer.parseInt(request.getParameter("diasAlquiler"));
     edadCliente = request.getParameter("edadCliente");
     formaPago = request.getParameter("formaPago");
     especificacionesExtra = request.getParameter("especificacionesExtra");

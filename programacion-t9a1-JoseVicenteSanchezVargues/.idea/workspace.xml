@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6045ada9-e3e8-4bcb-a7b8-2fba695ca359" name="Changes" comment="" />
+    <list default="true" id="6045ada9-e3e8-4bcb-a7b8-2fba695ca359" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Alquiler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/Alquiler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/formulario1.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/formulario1.jsp" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -109,6 +112,7 @@
       <workItem from="1779817993761" duration="1690000" />
       <workItem from="1779867241266" duration="2305000" />
       <workItem from="1779913345911" duration="473000" />
+      <workItem from="1779915732475" duration="326000" />
     </task>
     <servers />
   </component>
