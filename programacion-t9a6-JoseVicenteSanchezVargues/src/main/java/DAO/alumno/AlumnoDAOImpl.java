@@ -13,7 +13,7 @@ public class AlumnoDAOImpl implements AlumnoDAO {
 
     @Override
     public Alumno findByDni(String dni){
-        String sql = "SELECT * FROM alumno WHERE dni = ?";
+        String sql = "SELECT * FROM alumnos WHERE dni = ?";
         try {
             PreparedStatement ps = conn.prepareStatement(sql);
             ps.setString(1, dni);
