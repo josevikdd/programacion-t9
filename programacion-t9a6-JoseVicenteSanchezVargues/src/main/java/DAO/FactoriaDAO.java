@@ -7,7 +7,7 @@ public class FactoriaDAO {
 
     private static AlumnoDAOImpl alumnoDAOImpl = null;
 
-    public static AlumnoDAO getAlumnoDAO() {
+    public static AlumnoDAOImpl getAlumnoDAO() {
         if (alumnoDAOImpl == null){
             alumnoDAOImpl = new AlumnoDAOImpl();
         }
