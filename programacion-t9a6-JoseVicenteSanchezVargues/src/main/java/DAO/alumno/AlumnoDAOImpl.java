@@ -1,6 +1,6 @@
 package DAO.alumno;
 
-import DAO.modelo.Alumno;
+import modelo.Alumno;
 import utils.ConexionBD;
 
 import java.sql.Connection;

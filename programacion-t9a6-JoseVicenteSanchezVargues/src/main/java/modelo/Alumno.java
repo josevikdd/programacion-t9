@@ -1,4 +1,4 @@
-package DAO.modelo;
+package modelo;
 
 public class Alumno {
 

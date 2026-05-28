@@ -1,7 +1,7 @@
 package DAO.alumno;
 
 import DAO.IOperationsCRUD;
-import DAO.modelo.Alumno;
+import modelo.Alumno;
 
 public interface AlumnoDAO extends IOperationsCRUD<Alumno> {
     public Alumno findByDni(String dni);

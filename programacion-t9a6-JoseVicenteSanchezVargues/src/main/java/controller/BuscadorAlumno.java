@@ -2,7 +2,7 @@ package controller;
 
 import DAO.FactoriaDAO;
 import DAO.alumno.AlumnoDAOImpl;
-import DAO.modelo.Alumno;
+import modelo.Alumno;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
