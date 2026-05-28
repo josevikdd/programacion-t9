@@ -12,6 +12,6 @@
 </head>
   <body>
     <h2>Alumno no encontrado</h2>
-    Pulse AQUÍ para volver al buscador.
+    Pulse <a href="comprobarDNI.jsp">AQUÍ</a> para volver al buscador.
   </body>
 </html>
