@@ -35,13 +35,19 @@ public class BuscadorAlumno extends HttpServlet {
             throws ServletException, IOException {
         String dni = request.getParameter("dni");
 
-        alumno = buscarAlumno(dni);
+        RequestDispatcher rd;
 
-        request.setAttribute("alumno", alumno);
+        if (buscarAlumno(dni) != null) {
+            alumno = buscarAlumno(dni);
 
-        RequestDispatcher rd = request.getRequestDispatcher("/MuestraDatosAlumno.jsp");
-        rd.forward(request, response);
+            request.setAttribute("alumno", alumno);
 
+            rd = request.getRequestDispatcher("/MuestraDatosAlumno.jsp");
+            rd.forward(request, response);
+        } else {
+            rd = request.getRequestDispatcher("/AlumnoNoEncontrado.jsp");
+            rd.forward(request, response);
+        }
     }
 
     protected Alumno buscarAlumno(String dni){
