@@ -14,7 +14,7 @@
     <h2>Menú Principal</h2>
     <br>
     <section class="botones">
-        <a href="clientes.jsp"><button>Mantenimiento de clientes</button></a>
+        <a href="controladorClientes"><button>Mantenimiento de clientes</button></a>
         <button>Mantenimiento de comerciales</button>
         <button>Mantenimiento de pedidos</button>
     </section>
