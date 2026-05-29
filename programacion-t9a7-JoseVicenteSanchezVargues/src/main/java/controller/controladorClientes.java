@@ -16,6 +16,7 @@ import java.util.*;
 @WebServlet("/controladorClientes")
 public class controladorClientes extends HttpServlet {
     private static ClienteDAOImpl clienteDAOImpl = new ClienteDAOImpl();
+    int opcion = 0;
 
     @Override
     public void init() throws ServletException {
@@ -31,6 +32,16 @@ public class controladorClientes extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
+        opcion = Integer.parseInt(request.getParameter("opcion"));
+
+        switch (opcion) {
+            case 1:
+                listarClientes(request, response);
+        }
+    }
+
+    private void listarClientes(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
         List <Cliente> clientes = clienteDAOImpl.getAll();
 
         request.setAttribute("clientes", clientes);
