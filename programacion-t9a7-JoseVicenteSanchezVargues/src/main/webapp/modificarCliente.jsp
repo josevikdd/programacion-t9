@@ -31,5 +31,6 @@
             <b>Categoría: </b> <input type="number" name="nuevaCategoria" required /> <br>
             <input type="submit" value="Modificar cliente" />
         </form>
+        <a href="controladorClientes?opcion=1"><button>Volver al listado</button></a>
   </body>
 </html>

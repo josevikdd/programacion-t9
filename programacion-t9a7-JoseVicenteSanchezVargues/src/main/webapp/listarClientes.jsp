@@ -52,5 +52,6 @@
         </tr>
     <% } %>
     </table>
+    <a href="menuPrincipal.jsp" ><button>Volver al menú principal</button></a>
   </body>
 </html>
