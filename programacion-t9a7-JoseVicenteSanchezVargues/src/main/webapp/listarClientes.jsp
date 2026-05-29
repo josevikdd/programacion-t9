@@ -48,7 +48,7 @@
             <td><%= ciudad %></td>
             <td><%= categoria %></td>
             <td><a href="controladorClientes?opcion=2&id=<%= String.valueOf(id) %>"><button>Modificar</button></a></td>
-            <td><button>Eliminar</button></td>
+            <td><a href="controladorClientes?opcion=4&id=<%= String.valueOf(id) %>"><button>Eliminar</button></a></td>
         </tr>
     <% } %>
     </table>

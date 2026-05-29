@@ -50,6 +50,9 @@ public class controladorClientes extends HttpServlet {
             case 3:
                 modificarCliente(request, response);
                 break;
+            case 4:
+                eliminarCliente(request, response);
+                break;
         }
     }
 
@@ -82,7 +85,6 @@ public class controladorClientes extends HttpServlet {
     private void modificarCliente(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         Cliente cliente = clienteDAOImpl.findById(id);
-        //int categoria = Integer.parseInt(request.getParameter("categoria"));
         cliente.setNombre(request.getParameter("nuevoNombre"));
         cliente.setApellido1(request.getParameter("nuevoApellido1"));
         cliente.setApellido2(request.getParameter("nuevoApellido2"));
@@ -90,6 +92,19 @@ public class controladorClientes extends HttpServlet {
         cliente.setCategoria(Integer.parseInt(request.getParameter("nuevaCategoria")));
 
         clienteDAOImpl.update(cliente);
+
+        List <Cliente> clientes = clienteDAOImpl.getAll();
+
+        request.setAttribute("clientes", clientes);
+
+        RequestDispatcher rd = request.getRequestDispatcher("/listarClientes.jsp");
+        rd.forward(request, response);
+    }
+
+    private void eliminarCliente(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        id = new Long(request.getParameter("id"));
+        clienteDAOImpl.deleteById(id);
 
         List <Cliente> clientes = clienteDAOImpl.getAll();
 
