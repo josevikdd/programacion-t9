@@ -22,6 +22,8 @@
             <th>Segundo apellido</th>
             <th>Ciudad</th>
             <th>Categoría</th>
+            <th>Modificar</th>
+            <th>Eliminar</th>
         </tr>
     <%
         ArrayList<Cliente> clientes = (ArrayList<Cliente>) request.getAttribute("clientes");
