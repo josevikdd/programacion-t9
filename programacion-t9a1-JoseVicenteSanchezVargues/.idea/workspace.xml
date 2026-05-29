@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6045ada9-e3e8-4bcb-a7b8-2fba695ca359" name="Changes" comment="" />
+    <list default="true" id="6045ada9-e3e8-4bcb-a7b8-2fba695ca359" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../programacion-t9a7-JoseVicenteSanchezVargues/src/main/webapp/crearCliente.jsp" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -110,6 +112,7 @@
       <workItem from="1779867241266" duration="2305000" />
       <workItem from="1779913345911" duration="473000" />
       <workItem from="1779915732475" duration="467000" />
+      <workItem from="1780043605542" duration="2689000" />
     </task>
     <servers />
   </component>

@@ -52,6 +52,7 @@
         </tr>
     <% } %>
     </table>
-    <a href="menuPrincipal.jsp" ><button>Volver al menú principal</button></a>
+    <a href="crearCliente.jsp"><button>Crear cliente</button></a>
+    <a href="menuPrincipal.jsp"><button>Volver al menú principal</button></a>
   </body>
 </html>
