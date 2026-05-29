@@ -23,7 +23,7 @@
     %>
     <h2>Modificar cliente</h2>
     <b>Cliente: </b> <%= id %> - <%= nombre %> <%= apellido1 %> <%= apellido2 %> - <%= ciudad %> - <%= categoria %>
-        <form>
+        <form action="controladorClientes?opcion=3&id=<%= String.valueOf(id) %>" method="post">
             <b>Nombre: </b> <input type="text" name="nuevoNombre" required /> <br>
             <b>Primer apellido: </b> <input type="text" name="nuevoApellido1" required /> <br>
             <b>Segundo apellido: </b> <input type="text" name="nuevoApellido2" required /> <br>
