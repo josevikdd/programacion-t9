@@ -47,7 +47,7 @@
             <td><%= apellido2 %></td>
             <td><%= ciudad %></td>
             <td><%= categoria %></td>
-            <td><button>Modificar</button></td>
+            <td><a href="controladorClientes?opcion=2&id=<%= String.valueOf(id) %>"><button>Modificar</button></a></td>
             <td><button>Eliminar</button></td>
         </tr>
     <% } %>

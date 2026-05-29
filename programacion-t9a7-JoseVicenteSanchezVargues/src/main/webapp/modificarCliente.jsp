@@ -13,7 +13,7 @@
 </head>
   <body>
     <%
-    Cliente cliente = request.getParameter("cliente");
+    Cliente cliente = (Cliente) request.getAttribute("cliente");
     Long id = cliente.getId();
     String nombre = cliente.getNombre();
     String apellido1 = cliente.getApellido1();
@@ -24,11 +24,12 @@
     <h2>Modificar cliente</h2>
     <b>Cliente: </b> <%= id %> - <%= nombre %> <%= apellido1 %> <%= apellido2 %> - <%= ciudad %> - <%= categoria %>
         <form>
-            <b>Nombre: </b> <input type="text" name="nombre" /> <br>
-            <b>Primer apellido: </b> <input type="text" name="apellido1" /> <br>
-            <b>Segundo apellido: </b> <input type="text" name="apellido2" /> <br>
-            <b>Ciudad: </b> <input type="text" name="ciudad" /> <br>
-            <b>Categoría: </b> <input type="number" name="categoria" /> <br>
+            <b>Nombre: </b> <input type="text" name="nuevoNombre" required /> <br>
+            <b>Primer apellido: </b> <input type="text" name="nuevoApellido1" required /> <br>
+            <b>Segundo apellido: </b> <input type="text" name="nuevoApellido2" required /> <br>
+            <b>Ciudad: </b> <input type="text" name="nuevaCiudad" required /> <br>
+            <b>Categoría: </b> <input type="number" name="nuevaCategoria" required /> <br>
+            <input type="submit" value="Modificar cliente" />
         </form>
   </body>
 </html>
