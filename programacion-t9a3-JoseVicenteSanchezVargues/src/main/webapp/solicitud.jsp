@@ -16,18 +16,12 @@
     <h2>Solicitud de autorización</h2>
     <form action="solicitud.jsp" method="post">
         <b>Nombre o código de prueba: </b>
-        <input type="text" name="prueba"> <br>
+        <input type="text" name="prueba" required> <br>
         <b>Cantidad de autorizaciones: </b>
-        <input type="number" name="cantidad"> <br>
+        <input type="number" name="cantidad" required> <br>
         <input type="submit" value="Enviar solicitud">
     </form>
   <% } else { %>
-
-
-
-
-
-
   <jsp:forward page="/respuesta.jsp"></jsp:forward>
   <% } %>
   </body>
