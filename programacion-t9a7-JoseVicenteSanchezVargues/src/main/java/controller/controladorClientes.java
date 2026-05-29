@@ -16,7 +16,7 @@ import java.util.*;
 public class controladorClientes extends HttpServlet {
     private static ClienteDAOImpl clienteDAOImpl = new ClienteDAOImpl();
     int opcion = 0;
-    Long id = Long.valueOf("");
+    Long id;
 
     @Override
     public void init() throws ServletException {
@@ -25,6 +25,12 @@ public class controladorClientes extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        processRequest(request, response);
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
     }
