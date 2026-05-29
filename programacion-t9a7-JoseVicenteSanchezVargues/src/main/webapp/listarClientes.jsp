@@ -24,7 +24,7 @@
             <th>Categoría</th>
         </tr>
     <%
-        ArrayList<Cliente> clientes = request.getAttribute("clientes");
+        ArrayList<Cliente> clientes = (ArrayList<Cliente>) request.getAttribute("clientes");
 
         Long id;
         String nombre, apellido1, apellido2, ciudad;
